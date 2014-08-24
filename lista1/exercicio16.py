@@ -1,10 +1,10 @@
 from __future__ import unicode_literals
 # -*- coding: utf-8 -*-
 
+
 from math import ceil
 
 metros = float(raw_input("Informe a quantidade de metros quadrados: "))
-metros = metros*1.10
 
 lata = 18
 preco_lata = 80.
@@ -12,7 +12,7 @@ preco_lata = 80.
 galao = 3.6
 preco_galao = 25.
 
-qtd = metros/6
+qtd = round((metros/6)*1.1)
 
 
 if qtd//lata >= 1 and qtd%lata == 0:
