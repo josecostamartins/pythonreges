@@ -1,9 +1,11 @@
 # -*- coding: utf-8 -*-
 # from __future__ import print_function
 
-import sys
-if sys.version_info[0] >= 3:
-    raw_input = input
+# Faça um programa que peça as 2 notas bimestrais, as duas notas dos trabalhos e calcule a média
+# * prova * 7 (vale 70%)
+# * trabalho * 3 (vale 30%)
+
+
 
 var1 = raw_input("Informe a nota da primeira prova: ")
 var2 = raw_input("Informe a nota da segunda prova: ")
