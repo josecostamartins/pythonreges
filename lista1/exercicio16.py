@@ -16,17 +16,31 @@ qtd = round((metros/6)*1.1)
 
 
 if qtd//lata >= 1 and qtd%lata == 0:
-    print "Você precisa de {} lata(s)".format(qtd//lata)
+    '''
+        ATENÇÃO ATENÇÃO ATENÇÃO
+        ATENÇÃO ATENÇÃO ATENÇÃO
+
+        o lambda é uma função não importante para o objetivo do exercício, porém,
+        quem descobrir o que ela faz, ganha 0.5 ponto
+        Tem que falar:
+            qual o objetivo de uma função lambda
+            o que a função lambda deste arquivo faz
+        a data limite é até dia 24 de agosto durante a aula de Tópicos Especiais em Sistemas I
+
+    '''
+    print "Você precisa de {} {lata}".format(qtd//lata, lata=(lambda x: "latas" if x>1 else "lata")(qtd//lata))
     val_lata = (qtd//lata)*preco_lata
     print "Você vai gastar R${}".format(val_lata)
 elif qtd//lata >= 1 and qtd%lata != 0:
     gl = (qtd%lata)/galao
     val_lata = (qtd//lata)*preco_lata
     val_gal = ceil(gl)*preco_galao
-    print "Você precisa de {} lata(s) e {} galão(ões)".format(qtd//lata, ceil(gl))
+    print "Você precisa de {} {lata} e {} {galao}".format(qtd//lata, ceil(gl),
+                                                          lata=(lambda x: "latas" if x>1 else "lata")(qtd//lata),
+                                                          galao=(lambda x: "galões" if x>1 else "galão")(ceil(gl)))
     print "Você vai gastar R${}".format(val_lata+val_gal)
-elif qtd//lata < 1:
+else:
     gl = qtd/galao
     val_gal = ceil(gl)*preco_galao
-    print "Você precisa {} galões".format(ceil(gl))
+    print "Você precisa {} {suffix}".format(ceil(gl), suffix=(lambda x: "galões" if ceil(x)>1 else "galão")(gl))
     print "Você vai gastar R${}".format(val_gal)
