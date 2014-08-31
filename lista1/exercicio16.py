@@ -15,19 +15,21 @@ preco_galao = 25.
 qtd = round((metros/6)*1.1)
 
 
-if qtd//lata >= 1 and qtd%lata == 0:
-    '''
+'''
         ATENÇÃO ATENÇÃO ATENÇÃO
         ATENÇÃO ATENÇÃO ATENÇÃO
 
         o lambda é uma função não importante para o objetivo do exercício, porém,
-        quem descobrir o que ela faz, ganha 0.5 ponto
+        o primeiro que descobrir o que ela faz, ganha 0.5 ponto
         Tem que falar:
             qual o objetivo de uma função lambda
             o que a função lambda deste arquivo faz
-        a data limite é até dia 24 de agosto durante a aula de Tópicos Especiais em Sistemas I
+
+        A data limite é até dia anterior à primeira prova de Tópicos Especiais em Sistemas I
 
     '''
+if qtd//lata >= 1 and qtd%lata == 0:
+
     print "Você precisa de {} {lata}".format(qtd//lata, lata=(lambda x: "latas" if x>1 else "lata")(qtd//lata))
     val_lata = (qtd//lata)*preco_lata
     print "Você vai gastar R${}".format(val_lata)
